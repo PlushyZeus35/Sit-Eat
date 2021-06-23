@@ -1,0 +1,61 @@
+@import url('./css/fonts.css');
+
+a:link, a:visited, a:active, a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.nav{
+    background: #3FD8AE;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    
+}
+
+.centro{
+    display: flex;
+    align-items: center;
+}
+
+
+.marca{
+    color: white;
+}
+
+.desplegable{
+    display: none;
+}
+
+.main{
+    background: #67639E;
+}
+
+#search-addon{
+    background: transparent;
+    border:0;
+    position: relative;
+    right: 50px;
+}
+
+.atrasIcon{
+    color: blue;
+}
+
+.botonera-tipos{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .usersIcons, .boton-mesas, .iconoUsuario{
+        display: none;
+    }
+
+    .desplegable{
+        display: flex;
+    }
+    
+
+  }

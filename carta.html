@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon.jpg"/>
+    <link rel="stylesheet" href="carta.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shippori+Mincho&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row nav">
+            <div class="col boton-atras">
+                <h3 class="atras"><a href="reservas.html" class="fas fa-chevron-circle-left atrasIcon"></a></h3>
+            </div>
+
+            <div class="col titulo">
+                <a href="#"><h3 class="marca">Sit&Eat</h3></a>
+            </div>
+            
+            <div class="col boton-mesas">
+                
+            </div>
+            
+          </div>
+
+    </div>
+
+    <div class="row pt-5 main">
+        <div class="col-sm-3 container-fluid p-0 pt-4 resumen">
+
+            <div class="modal fade" id="modalPago" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Proceso de pago</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                    Seleccione un método de pago disponible.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary"  data-dismiss="modal" onclick="location.href='mainwindow.html'">Tarjeta</button>
+                      <button type="button" class="btn btn-info" data-dismiss="modal" onclick="location.href='mainwindow.html'">Efectivo</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-center mt-3 tituloPrecio">Resumen</h2>
+            </div>
+
+            <div class="contenedorPrecios" id="contenedor">
+
+                <div class="container-fluid mt-3 pedido m-0 p-3">
+                    <div class="nombre pt-2">
+                        <p class=""><strong class=""> Ensalada César </strong></p>
+                    </div>
+                    <div class="precio pt-2">
+                        <p> <strong> 9,99€ </strong> </p>
+                    </div>
+                    <div class="estado">
+                        <span class="badge badge-success">Entregado</span>
+                    </div>
+                    <div class="multi pt-2">
+                        <p>x1</p>
+                    </div>
+                </div>
+
+                <div class="container-fluid mt-3 pedido m-0 p-3">
+                    <div class="nombre pt-2">
+                        <p class=""><strong class=""> Ensalada César </strong></p>
+                    </div>
+                    <div class="precio pt-2">
+                        <p> <strong> 9,99€ </strong> </p>
+                    </div>
+                    <div class="estado">
+                        <span class="badge badge-success">Entregado</span>
+                    </div>
+                    <div class="multi pt-2">
+                        <p>x1</p>
+                    </div>
+                </div>
+
+                <div class="container-fluid mt-3 pedido m-0 p-3">
+                    <div class="nombre pt-2">
+                        <p class=""><strong class=""> Ensalada César </strong></p>
+                    </div>
+                    <div class="precio pt-2">
+                        <p> <strong> 9,99€ </strong> </p>
+                    </div>
+                    <div class="estado">
+                        <span class="badge badge-success">Entregado</span>
+                    </div>
+                    <div class="multi pt-2">
+                        <p>x1</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="resumenPrecios">
+                <h2 class="text-center"> Cuenta</h2>
+                <h5 class="pl-4"> Productos: 30€</h5>
+                <h5 class="pl-4"> Terraza: 1,50€</h5>
+                <div class="d-flex">
+                    <h3 class="pl-4"> Total: 70,70€</h3>
+                    <a href="" class="btn btn-primary ml-5" data-toggle="modal" data-target="#modalPago">Pagar</a>
+                </div>
+                
+            </div>
+
+
+        </div>
+
+        <div class="col-sm-9 container-fluid pt-3">
+
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">¿Quieres pedir este producto?</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                    Está a punto de añadir un nuevo producto a su cuenta, una vez confirmado no se podrá cancelar.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary" onclick="pedirProducto();" data-dismiss="modal" id="botonPedir">Pedir producto</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-center mt-3 tituloPrecio">Carta</h2>
+            </div>
+            
+            <div class="carta d-flex flex-column pt-4 ml-4 mr-4 mb-4">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <h3>Bebidas</h3>
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container-fluid d-flex justify-content-around mb-3">
+                                <h4 class="pt-2">Agua Mineral</h4>
+                                <h5 class="pt-2">1,99€</h5>
+                                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                            </div>
+
+                            <div class="container-fluid d-flex justify-content-around mb-3">
+                                <h4 class="pt-2">Coca Cola</h4>
+                                <h5 class="pt-2">2,99€</h5>
+                                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                            </div>
+
+                            <div class="container-fluid d-flex justify-content-around mb-3">
+                                <h4 class="pt-2">Estrella Galicia</h4>
+                                <h5 class="pt-2">2,10€</h5>
+                                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                            </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h3>Entrantes</h3>
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container-fluid d-flex justify-content-around mb-3">
+                                <h4 class="pt-2">Patatas Básicas</h4>
+                                <h5 class="pt-2">2,50€</h5>
+                                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                            </div>
+                            <div class="container-fluid d-flex justify-content-around mb-3">
+                                <h4 class="pt-2">Nuggets Pollo</h4>
+                                <h5 class="pt-2">4,50€</h5>
+                                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                            </div>
+                            <div class="container-fluid d-flex justify-content-around mb-3">
+                                <h4 class="pt-2">Fingers de queso</h4>
+                                <h5 class="pt-2">5,00€</h5>
+                                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h3>Burguers</h3>
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container-fluid d-flex justify-content-around mb-3">
+                                <h4 class="pt-2">Burguer Básica</h4>
+                                <h5 class="pt-2">5,00€</h5>
+                                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" >Pedir</a>
+                            </div>
+                            <div class="container-fluid d-flex justify-content-around mb-3">
+                                <h4 class="pt-2">Burguer de la casa</h4>
+                                <h5 class="pt-2">4,00€</h5>
+                                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                            </div>
+                            <div class="container-fluid d-flex justify-content-around mb-3">
+                                <h4 class="pt-2">Burguer Especial</h4>
+                                <h5 class="pt-2">8,00€</h5>
+                                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              <h3>Bocadillos</h3>
+                          </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <div class="container-fluid d-flex justify-content-around mb-3">
+                                  <h4 class="pt-2">Bocadillo Básico</h4>
+                                  <h5 class="pt-2">4,00€</h5>
+                                  <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                              </div>
+                              <div class="container-fluid d-flex justify-content-around mb-3">
+                                  <h4 class="pt-2">Bocadillo de pollo</h4>
+                                  <h5 class="pt-2">6,00€</h5>
+                                  <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                              </div>
+                              <div class="container-fluid d-flex justify-content-around mb-3">
+                                  <h4 class="pt-2">Bocadillo vegetal</h4>
+                                  <h5 class="pt-2">5,00€</h5>
+                                  <a href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                  </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="carta.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon.jpg"/>
+    <link rel="stylesheet" href="mainWindow.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shippori+Mincho&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark">
+
+    <div class="container-fluid">
+        <div class="row row-cols-3 nav">
+
+            <div class="container izquierda p-0">
+                <div class=" boton-atras">
+                    <h3 class="atras"><a href="index.html" class="fas fa-chevron-circle-left atrasIcon"></a></h3>
+                </div>
+            </div>
+            
+            <div class="container centro text-center">
+                <div class="col titulo">
+                    <a href="#"><h3 class="marca">Sit&Eat</h3></a>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row-reverse ">
+
+                <div class="usersIcons d-flex flex-row mr-3">
+                    <h3 class="iconoUsuario"><a href="logros.html" class="fas fa-solid fa-trophy mr-3"></a></h3>
+                    <h3 class="iconoUsuario"><a href="user.html" class="fas fa-user"></a></h3>
+                </div>
+                <div class="boton-mesas mr-3">
+                    <a href="reservas.html"  class="btn btn-primary">Mesas</a>
+                </div>
+
+                
+                <div class="btn-group desplegable">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        <i class="fas fa-solid fa-bars"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="user.html"><i class="fas fa-user"></i> <strong> Usuario</strong></a>
+                        <a class="dropdown-item" href="logros.html"><i class="fas fa-solid fa-trophy"></i> <strong> Logros</strong></a>
+                        <a class="dropdown-item" href="reservas.html"><i class="fas fa-utensils"></i> <strong> Mesas</strong></a>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            
+        </div>
+
+    </div>
+    <div class="container-fluid  main">
+
+        <div class="container pt-5 main-top">
+
+            <h3 class="text-center pt-5">Hola <strong>Borja</strong></h3>
+            <h4 class="text-center mb-5">¿Donde te apetece comer hoy?</h4>
+
+        
+            <div class="input-group rounded ml-3">
+                <input type="search" class="form-control rounded" placeholder="Busque su restaurante preferido..." aria-label="Search"/>
+                <span class="input-group-text" id="search-addon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
+        
+        </div>
+        
+        <div class="container pt-5">
+            <div class="botonera-tipos btn-group-toggle row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4" data-toggle="buttons">
+                <label class="btn btn-primary col m-1">
+                    <input type="radio" name="options" onclick="setAllRestaurants();" autocomplete="off" checked> Todos
+                </label>
+                <label class="btn btn-primary col m-1">
+                    <input type="radio" name="options" onclick="setHamburguerRestaurants();" autocomplete="off"> Hamburguesas <i class="fas fa-hamburger"></i>
+                </label>
+                <label class="btn btn-primary m-1">
+                    <input type="radio" name="options" onclick="setPizzaRestaurants();" autocomplete="off"> Pizza <i class="fas fa-pizza-slice"></i>
+                </label>
+                <label class="btn btn-primary m-1">
+                    <input type="radio" name="options" onclick="setAsiaticoRestaurants();" autocomplete="off"> Asiático <i class="fas fa-fish"></i>
+                </label>
+                <label class="btn btn-primary m-1">
+                    <input type="radio" name="options" onclick="setVeggieRestaurants();" autocomplete="off"> Vegetariano <i class="fas fa-seedling"></i>
+                </label>
+            </div>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 p-5" id="contenedorRestaurantes">
+
+            <!-- <a href="#">
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="burguer.jpg" class="card-img-top" alt="...">
+                        <div class="card-body p-0">
+
+                            <div class="container-fluid pt-3 pl-3 pr-3 card-title clearfix mb-0">
+                                <h5 class="float-left">Burguer King</h5>
+                                <h6 class="float-right">9:00-20:00</h6>
+                            </div>
+                            
+                            <div class="card-text pl-3 pr-3 pb-3 mt-0">
+                                <small>Disponibilidad</small>
+                                <div class="progress ">
+                                    <div class="progress-bar bg-danger" style="width:20%">20%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="abuela.jpg" class="card-img-top" alt="...">
+                        <div class="card-body p-0">
+
+                            <div class="container-fluid pt-3 pl-3 pr-3 card-title clearfix mb-0">
+                                <h5 class="float-left">Burguer King</h5>
+                                <h6 class="float-right">9:00-20:00</h6>
+                            </div>
+                            
+                            <div class="card-text pl-3 pr-3 pb-3 mt-0">
+                                <small>Disponibilidad</small>
+                                <div class="progress ">
+                                    <div class="progress-bar bg-danger" style="width:20%">20%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.larepublica.net%2Fstorage%2Fimages%2F2019%2F09%2F03%2F20190903095650.bk-3.x2.jpg&f=1&nofb=1" class="card-img-top" alt="...">
+                        <div class="card-body p-0">
+
+                            <div class="container-fluid pt-3 pl-3 pr-3 card-title clearfix mb-0">
+                                <h5 class="float-left">Burguer King</h5>
+                                <h6 class="float-right">9:00-20:00</h6>
+                            </div>
+                            
+                            <div class="card-text pl-3 pr-3 pb-3 mt-0">
+                                <small>Disponibilidad</small>
+                                <div class="progress ">
+                                    <div class="progress-bar bg-danger" style="width:20%">20%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.larepublica.net%2Fstorage%2Fimages%2F2019%2F09%2F03%2F20190903095650.bk-3.x2.jpg&f=1&nofb=1" class="card-img-top" alt="...">
+                        <div class="card-body p-0">
+
+                            <div class="container-fluid pt-3 pl-3 pr-3 card-title clearfix mb-0">
+                                <h5 class="float-left">Burguer King</h5>
+                                <h6 class="float-right">9:00-20:00</h6>
+                            </div>
+                            
+                            <div class="card-text pl-3 pr-3 pb-3 mt-0">
+                                <small>Disponibilidad</small>
+                                <div class="progress ">
+                                    <div class="progress-bar bg-danger" style="width:20%">20%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.larepublica.net%2Fstorage%2Fimages%2F2019%2F09%2F03%2F20190903095650.bk-3.x2.jpg&f=1&nofb=1" class="card-img-top" alt="...">
+                        <div class="card-body p-0">
+
+                            <div class="container-fluid pt-3 pl-3 pr-3 card-title clearfix mb-0">
+                                <h5 class="float-left">Burguer King</h5>
+                                <h6 class="float-right">9:00-20:00</h6>
+                            </div>
+                            
+                            <div class="card-text pl-3 pr-3 pb-3 mt-0">
+                                <small>Disponibilidad</small>
+                                <div class="progress ">
+                                    <div class="progress-bar bg-danger" style="width:20%">20%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.larepublica.net%2Fstorage%2Fimages%2F2019%2F09%2F03%2F20190903095650.bk-3.x2.jpg&f=1&nofb=1" class="card-img-top" alt="...">
+                        <div class="card-body p-0">
+
+                            <div class="container-fluid pt-3 pl-3 pr-3 card-title clearfix mb-0">
+                                <h5 class="float-left">Burguer King</h5>
+                                <h6 class="float-right">9:00-20:00</h6>
+                            </div>
+                            
+                            <div class="card-text pl-3 pr-3 pb-3 mt-0">
+                                <small>Disponibilidad</small>
+                                <div class="progress ">
+                                    <div class="progress-bar bg-danger" style="width:20%">20%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.larepublica.net%2Fstorage%2Fimages%2F2019%2F09%2F03%2F20190903095650.bk-3.x2.jpg&f=1&nofb=1" class="card-img-top" alt="...">
+                        <div class="card-body p-0">
+
+                            <div class="container-fluid pt-3 pl-3 pr-3 card-title clearfix mb-0">
+                                <h5 class="float-left">Burguer King</h5>
+                                <h6 class="float-right">9:00-20:00</h6>
+                            </div>
+                            
+                            <div class="card-text pl-3 pr-3 pb-3 mt-0">
+                                <small>Disponibilidad</small>
+                                <div class="progress ">
+                                    <div class="progress-bar bg-danger" style="width:20%">20%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a> -->
+    </div>
+    <script src="mainWindow.js"></script>
+</body>
+</html>

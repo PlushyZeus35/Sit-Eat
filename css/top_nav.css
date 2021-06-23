@@ -1,0 +1,31 @@
+a:link, a:visited, a:active, a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.nav{
+    background: #3FD8AE;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.titulo, .atras{
+    display: flex;
+    justify-content: center;
+}
+
+.marca{
+    color: white;
+}
+
+.boton-mesas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.boton-atras{
+    display: flex;
+    justify-content: flex-start;
+}

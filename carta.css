@@ -1,0 +1,37 @@
+
+@import url('./css/top_nav.css');
+@import url('./css/fonts.css');
+.main, body{
+    background: #67639E;
+}
+
+.resumen{
+    background: rgba(0,0,0,0.29);
+    height: 90vh;
+}
+
+.pedido{
+    background: #D6D0D0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tituloPrecio{
+    color: white;
+}
+
+.contenedorPrecios{
+    height: 60%;
+    overflow: auto;
+}
+
+.resumenPrecios{
+    border-top: 2px solid black;
+    padding-top: 20px;
+    color: white;
+}
+
+span{
+    color: black;
+}

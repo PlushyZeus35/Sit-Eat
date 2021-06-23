@@ -1,0 +1,53 @@
+
+@import url('./css/top_nav.css');
+@import url('./css/fonts.css');
+.maininfo{
+    background:#D6D0D0;
+}
+
+.imagen{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.dispo{
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.main{
+    background: #67639E;
+}
+
+@media screen and (max-width: 600px) {
+    .horario{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    .horario p{
+        margin-right: 2px;
+    }
+
+    .mapa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fechas{
+        flex-direction: column;
+    }
+
+    .input-group{
+        margin-bottom: 8px;
+    }
+}
